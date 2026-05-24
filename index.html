@@ -1,23 +1,625 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 스마트 모빌리티 솔루션 - 장기렌트 및 자동차 리스 종합 가이드</title>
+    <meta name="description" content="2026년 최신 자동차 금융 트렌드를 반영한 장기렌트와 리스 비교 가이드입니다. 폴스타4, K8 하이브리드, BMW 5시리즈 등 인기 차종의 상세 분석과 저신용, 무보증, 중고차 금융 상품의 합리적인 선택법을 제시합니다.">
+    <meta name="keywords" content="차렌트, 모닝리스, 무보증장기렌트, 폴스타4장기렌트, 리스렌트차이, BMW 5시리즈 리스, 자동차장기렌트, 1년렌트카, 중고장기렌트, 중고리스자동차, 저신용장기렌트, K8하이브리드장기렌트">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://carnrentosite.withusrizz.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2026 스마트 모빌리티 솔루션 - 장기렌트 및 자동차 리스 종합 가이드">
+    <meta property="og:description" content="2026년 변화하는 자동차 금융 트렌드에 발맞춘 최적의 선택법. 장기렌트와 리스의 차이점부터 무보증 및 저신용 조건까지 완벽 정리.">
+    <meta property="og:image" content="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1200">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelBlue: '#EBF4F6',
+                        pastelPurple: '#F3E8FF',
+                        pastelTeal: '#E6FFFA',
+                        pastelRose: '#FFF5F5',
+                        brandDark: '#1E293B',
+                        brandMuted: '#64748B'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Structured Data for Naver and Google AI Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "2026년 기준 폴스타4 장기렌트의 매력은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "폴스타4는 혁신적인 쿠페형 SUV 디자인과 독창적인 리어 윈도우리스 설계를 자랑하는 전기차입니다. 장기렌트를 이용하면 전기차 특유의 빠른 초기 감가상각 위험을 방어하고, 매년 달라지는 정부 및 지자체 전기차 보조금 혜택을 극대화한 합리적인 고정 월 납입료로 차량을 운용할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "신차 장기렌트와 자동차 리스의 근본적인 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "가장 큰 차이는 '번호판 규정'과 '보험 이력'에 있습니다. 장기렌트는 하, 허, 호 번호판을 사용하며 렌터카사 전용 요율의 보험이 일괄 적용되어 사고 시에도 개인 보험료 할증이 없습니다. 반면 자동차 리스는 일반 번호판을 사용하여 품위를 유지할 수 있고, 개인의 운전 경력 및 무사고 혜택을 그대로 유지할 수 있지만 금융 부채로 인식되는 차이가 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "초기 비용이 전혀 없는 무보증 장기렌트가 정말 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 가능합니다. 무보증 장기렌트는 서울보증보험의 개인 신용 평가를 바탕으로 보증금 면제 승인을 받거나, 보증보험 증권을 발행하여 초기 인수 비용 0원으로 계약하는 방식입니다. 이를 통해 초기 자금 유동성을 보존하면서 즉시 신차를 인도받을 수 있습니다."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed min-h-screen">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-indigo-50 via-teal-50 to-pink-50 border-b border-slate-100 py-16 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-1.5 bg-indigo-600 text-white text-xs font-semibold tracking-wide rounded-full uppercase mb-4 shadow-sm">2026 Premium Mobility Report</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-brandDark tracking-tight leading-tight">
+                스마트 드라이빙을 위한 <br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-teal-500">2026 자동차 금융 자산화 가이드</span>
+            </h1>
+            <p class="mt-6 text-base md:text-lg text-brandMuted max-w-2xl mx-auto font-medium">
+                공유에서 소유로, 소유에서 사용 권장 시대로 변화하는 2026년의 라이프스타일. 다양한 조건과 차종에 적합한 최적의 리스 및 장기렌트 분석 전략을 제공합니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+
+        <!-- CATEGORY A: 프리미엄 & 전동화 모빌리티 (3 Items) -->
+        <section class="mb-16">
+            <div class="border-l-4 border-indigo-500 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-brandDark">01. 프리미엄 & 전동화 모빌리티 혁신</h2>
+                <p class="text-sm text-brandMuted mt-1">친환경 트렌드와 글로벌 하이엔드 완성차가 제시하는 2026년 최신 지향점</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 폴스타4장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=600" alt="폴스타4 장기렌트 혁신 모델" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">Next-Gen Electric</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentbybestt.withusrizz.com" target="_blank" rel="noopener noreferrer">폴스타4장기렌트 솔루션</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                2026년은 모빌리티 패러다임이 전동화와 디지털 플랫폼의 융합으로 한 단계 도약하는 원년입니다. 그 정점에 서 있는 차량이 바로 폴스타4입니다. 수려한 리어 윈도우리스 디자인과 강력한 퍼포먼스를 선보이는 이 매혹적인 쿠페형 SUV는 이제 자산으로 구매하는 대상이 아닌, 주기적으로 케어받으며 타는 스마트 소비의 대명사가 되었습니다. 
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                합리적인 오너들은 <a href="https://carnrentbybestt.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">폴스타4장기렌트</a> 서비스를 적극적으로 활용하여 불확실한 중고 전기차 시장의 감가상각のリ스크로부터 스스로를 보호하고 있습니다. 렌트 이용 시에는 매년 변화하는 복잡한 지자체별 전기차 보조금 산정 절차를 개인이 거칠 필요가 없으며, 정해진 계약기간 동안 일정한 월 납입료만을 지불함으로써 세무 및 재정 계획의 투명성을 극대화할 수 있습니다. 특히 배터리 기술의 급격한 진보 속에서, 3~5년 후 배터리 열화 현상에 대응하는 가장 현명한 대안이 바로 반납형 렌탈 방식이라는 점은 이미 스마트 컨슈머들 사이에서 정설로 통합니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentbybestt.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                폴스타4 조건 분석 바로가기
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- K8하이브리드장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=600" alt="K8 하이브리드 준대형 세단" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">Hybrid Efficiency</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentbybestx.withusrizz.com" target="_blank" rel="noopener noreferrer">K8하이브리드장기렌트 맞춤설계</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                내연기관의 신뢰성과 친환경 전기 모터의 우수한 효율성을 환상적으로 결합한 하이브리드는 현시점 최고의 현실적인 타협안입니다. 준대형 세단의 격조 높은 품격과 장거리 크루징에서의 놀라운 연료 효율성을 고루 갖춘 K8 하이브리드는 패밀리카와 비즈니스 업무용 차량 모두를 아우르며 높은 인기를 구가하고 있습니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                개인 및 법인 사업자들은 세무 효율성을 극대화하기 위해 <a href="https://carnrentbybestx.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">K8하이브리드장기렌트</a> 금융 시스템을 적용하고 있으며, 매월 발행되는 정산 계산서를 통해 간단히 필요경비 처리를 실현하고 있습니다. 1.6 터보 하이브리드 엔진이 선사하는 저렴한 자동차세 혜택과 공영주차장 및 혼잡통행료 감면 등 하이브리드 고유의 친환경차 혜택이 렌트사의 대량 구매 할인(특판 할인) 혜택과 만나 극대화된 가성비를 선사합니다. 초기 목돈 투입 없이 매달 합리적인 고정 비용으로 이 프리미엄 세단의 오너가 되어 정숙한 도심 주행을 마음껏 경험해 보십시오.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentbybestx.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                K8 하이브리드 특판가 조회
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BMW 5시리즈 리스 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" alt="BMW 5시리즈 럭셔리 세단" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Luxury Business</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentbestestg.withusrizz.com" target="_blank" rel="noopener noreferrer">BMW 5시리즈 리스 운용법</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                글로벌 비즈니스 세단의 표준이자 최고의 주행 감각을 자랑하는 스포츠 세단인 BMW 5시리즈는 고급스러운 지향점을 고스란히 담아내고 있습니다. 수입차 고유의 정체성을 온전히 표현하면서도 일반 번호판을 통해 자긍심을 유지할 수 있다는 장점 덕분에 임원진 의전 차량과 고소득 전문직 오너들의 뜨거운 선택을 받고 있습니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                이 품격 높은 독일 프리미엄 세단을 가장 이상적으로 운용하는 비결은 역시 <a href="https://carnrentbestestg.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">BMW 5시리즈 리스</a> 프로세스를 채택하는 것입니다. 리스는 자산의 대외적 품위를 완벽히 보존하면서도 연간 최대 1,500만 원 한도의 업무용 차량 세액 공제 혜택을 자연스럽게 수혜할 수 있는 최상의 세무 수단입니다. 보험 요율 또한 운전자 개인의 무사고 경력이 고스란히 계승 및 유지되므로, 우량한 보험 이력을 가진 베테랑 드라이버일수록 장기렌트에 비해 압도적으로 저렴한 납입 설계서를 받아볼 수 있습니다. 2026년의 완벽한 드라이빙 다이내믹스를 지금 경험하십시오.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentbestestg.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                5시리즈 금융 리스크립트 확인
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORY B: 금융 전략 및 핵심 비교 (3 Items) -->
+        <section class="mb-16">
+            <div class="border-l-4 border-teal-500 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-brandDark">02. 금융 설계 및 비교 분석 마스터리</h2>
+                <p class="text-sm text-brandMuted mt-1">이용자의 재무 상황에 따른 정밀한 맞춤 구조와 제도적 혜택 정리</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 리스렌트차이 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600" alt="금융 계산과 계약 분석" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">Financial Analysis</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentnsite.withusrizz.com" target="_blank" rel="noopener noreferrer">장기렌트와 자동차 리스의 핵심적 차이</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                매월 납입하는 사용료 기반의 두 서비스 사이에서 수많은 스마트 오너들은 항상 고민의 기로에 직면하곤 합니다. 일견 비슷해 보이지만 세무학적, 실무적으로 매우 뚜렷하고 다른 구조를 띠고 있기에 본인의 명확한 자산 성향과 운전 패턴을 사전에 냉정하게 파악하는 과정이 매우 절대적입니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                본질적인 금융 구조를 이해하기 위한 <a href="https://carnrentnsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">리스렌트차이</a> 리포트에 따르면, 자동차 리스는 이용자의 개인 금융 신용을 바탕으로 한 대출성 여신 금융상품으로 분류되기에 개인 부채 한도와 DSR(총부채원리금상환비율) 산정에 밀접한 영향력을 주게 됩니다. 반면 장기렌트는 단순한 '임대 상품'으로 등재되어 부채 계정에 절대 포함되지 않아 추가 대출이나 아파트 청약 등의 중요한 가계 금융 활동 시 자산 건전성 유지 측면에서 무궁무진한 우위를 지닙니다. 번호판 역시 리스는 일반 자가용 플레이트를 그대로 활용하지만, 렌트는 식별 플레이트를 사용하여 하, 허, 호 표기를 적용하게 됩니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentnsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                장기렌트 vs 리스 1:1 정밀 표 확인
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 무보증장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="무보증 자동차 인도" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md">Zero Zero Deposit</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentofbesth.withusrizz.com" target="_blank" rel="noopener noreferrer">무보증장기렌트 초기비용 0원 달성</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                신차를 인수하는 과정에서 발생하는 취등록세, 초기 세금, 자동차 종합보험 가입 비용 등 수백만 원에 달하는 초기 유동자금 묶임 현상은 비즈니스를 영위하거나 이제 막 재테크를 전개해 나가는 이들에게 상당한 심리적 및 실질적 자금 압박으로 다가옵니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                그러나 최근 고도로 발달한 국내 금융 심사 프로세스 하에서는 <a href="https://carnrentofbesth.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">무보증장기렌트</a> 전용 특별 심사 트랙을 통하여 보증금이나 선납금 일체의 납부 없이 즉각적인 신차 인수가 원활하게 실현됩니다. 서울보증보험의 이행 보증증권 제도를 똑똑하게 결합하거나, 개인 신용 점수가 우량할 경우 금융사 자체의 '무담보 무보증 올패스 승인' 트랙을 적용함으로써 현금 흐름을 전적으로 보존하는 것이 가능해집니다. 이를 통해 확보된 여유 자금은 다른 재테크 투자나 사업체의 원자재 확보 비용으로 더 값지게 유통할 수 있어 기회비용 극대화에 엄청난 이바지를 합니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentofbesth.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                무보증 심사 요건 진단하기
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 저신용장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600" alt="신차 키 전달 및 도약" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md">Financial Recovery</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentisite.withusrizz.com" target="_blank" rel="noopener noreferrer">저신용장기렌트 극복 비결</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                인생을 살아가다 보면 예기치 못한 사업 부진이나 연체 기록 등으로 일시적으로 신용 등급이 하락하여 주요 금융권의 문턱을 넘지 못해 차량 구매에 극심한 좌절을 겪는 순간이 찾아올 수 있습니다. 하지만 모빌리티가 현대 생업의 필수 불가결한 도구가 된 현시점에 이를 해결할 우회로가 존재합니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                바로 일반 금융 캐피탈사와는 심사 궤적을 전적으로 달리하는 <a href="https://carnrentisite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">저신용장기렌트</a> 전담 자체 심사 프로그램입니다. 신용 점수 자체보다 현재 고정적인 소득 활동 여부와 성실한 재기 의지를 증빙하는 통장 거래 내역 등을 기준으로 삼아, 소정의 보증금 예치나 월 납입료 자동이체 등록만으로도 신차를 즉각 이용할 수 있게 보장해 줍니다. 렌터카사 명의의 일괄 종합 보험이 가입되어 출고되므로 개인 신용 하락과 전혀 무관하게 정규 신차 계약이 성사되며, 이를 발판으로 활발한 소득 활동을 전개해 신용을 재건해 나갈 기틀을 단단히 마련할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentisite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                저신용 안심 승인 승계 가이드
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORY C: 스마트 실속형 라이프스타일 (3 Items) -->
+        <section class="mb-16">
+            <div class="border-l-4 border-rose-500 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-brandDark">03. 실속 중심형 경제적인 대안</h2>
+                <p class="text-sm text-brandMuted mt-1">극도의 효율성과 유지보수 비용을 낮추는 경차 및 세컨카, 중고차 금융 기법</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 모닝리스 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="합리적인 도심 주행용 차량" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md">Eco City Compact</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentbybesta.withusrizz.com" target="_blank" rel="noopener noreferrer">모닝리스 경제성 검증</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                골목길이 많고 주차난이 심각한 국내 메트로폴리탄 도시 환경 속에서 최고의 경형 세단으로 손꼽히는 기아 모닝은 놀라운 연비 효율성과 유지 편의성으로 첫차 혹은 가정 내 세컨드 카로 꾸준하고 한결같은 인기를 유지하고 있습니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                경형 차량 고유의 강점을 사업자 세제 혜택과 결합하는 가장 효율적인 해법은 바로 <a href="https://carnrentbybesta.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">모닝리스</a> 시스템입니다. 세법상 경형 차량의 리스는 임차료에 포함된 부가세 10% 전액을 매 분기 부가세 신고 시 환급받을 수 있는 '부가세 환급형 리스'에 완벽히 충족됩니다. 고속도로 통행료 50% 감면과 환승 및 공영 주차장 파격 감면 등의 탁월한 실효적 메리트와 함께, 리스를 통해 차량 유지 관리에 소요되는 번거로운 회계 처리 전 과정을 대폭 간소화할 수 있어 소상공인과 중소기업의 도심 밀착형 비즈니스 발로서의 가치를 극한으로 끌어올려 줍니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentbybesta.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                모닝 부가세 환급 시뮬레이션
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 중고장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600" alt="고품질 중고 장기렌트 차량" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md">Value Choice</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentfsite.withusrizz.com" target="_blank" rel="noopener noreferrer">중고장기렌트 감가상각 극복기</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                신차 출시 직후의 대기 시간이 지루하게 느껴지거나, 차량 등록 원부의 소유 이력 없이 신차급 컨디션을 지닌 검증된 차량을 경제적이고도 신속하게 소유하고픈 영리한 소비자들 사이에서 중고 상품의 인기는 날이 갈수록 드높아지고 있습니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                철저한 성능 점검과 내외관 리프레시를 완벽히 통과한 차량을 엄선하는 <a href="https://carnrentfsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">중고장기렌트</a> 서비스는 신차 대비 압도적으로 저렴한 월 납입료 메리트를 선물합니다. 대외적으로 명확하게 파악되는 감가상각이 이미 초기 차량 원가에 깊게 녹아들어 있기 때문에, 고객은 잔존 가치 저하에 대한 우려를 완벽하게 불식시킬 수 있습니다. 신차를 직접 계약하여 수개월을 마음 졸이며 대기하는 긴 슬롯 대신 영업일 기준 3~5일 이내의 미라클처럼 신속한 차량 명도와 운행이 실현되므로, 급격히 차량 수요가 필요한 신규 비즈니스 창업이나 프로젝트성 단기 드라이빙 수요에 가장 현명한 해결책으로 급부상하고 있습니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentfsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                엄선 중고차 리스트업 확인
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 중고리스자동차 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600" alt="중고차 수입 금융 승계" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-slate-600 bg-slate-50 px-2.5 py-1 rounded-md">Smart Asset</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentbestestm.withusrizz.com" target="_blank" rel="noopener noreferrer">중고리스자동차 운용 전략</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                감가상각률이 높은 수입 럭셔리 등급이나 고배기량 대형 SUV의 경우 신차로 출고하는 것은 자산 관리의 측면에서 엄청난 감가 손해를 오롯이 개인이 감내해야 함을 시사합니다. 이러한 맹점을 슬기롭게 우회하여 최고급 차량을 품위 있게 즐기는 상위 1% 세일즈 기법이 존재합니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                바로 고도의 정밀 진단 시스템을 거쳐 상품화 과정을 끝마친 <a href="https://carnrentbestestm.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">중고리스자동차</a> 상품군을 눈여겨보는 것입니다. 기존 리스 가입자가 중도 해지 과정에서 겪는 막대한 패널티를 피하고자 수수료를 지원해 주며 승계를 요청하는 '리스 승계' 매물들을 공략하게 되면, 초기 취등록세가 전적으로 면제되거나 저렴한 이율 조건을 그대로 이전받는 초고농도 혜택을 설계할 수 있습니다. 겉보기에는 완벽한 프리미엄 수입차 포스를 자아내면서도 실제 지출하는 리스료는 실속 있는 세컨카 수준에 준하도록 설계가 가능하여, 대외적 바잉 파워가 절실히 수반되어야 하는 사업가 및 고소득 크리에이터 군단에 탁월한 해법으로 찬사받고 있습니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentbestestm.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                승계 수수료 혜택 정보 알아보기
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATEGORY D: 범용 드라이빙 서비스 (3 Items) -->
+        <section class="mb-16">
+            <div class="border-l-4 border-emerald-500 pl-4 mb-8">
+                <h2 class="text-2xl font-bold text-brandDark">04. 올라운드 장단기 렌터카 가이드</h2>
+                <p class="text-sm text-brandMuted mt-1">라이프스타일의 유연성을 부여하는 범용 기간 장단기 렌트카 분석</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 1년렌트카 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="유연한 모빌리티 시승" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">Flexible 12 Months</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentzssite.withusrizz.com" target="_blank" rel="noopener noreferrer">1년렌트카 틈새 활용 가이드</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                대다수의 정통 신차 장기렌탈 계약들은 보통 36개월에서 길게는 60개월까지의 장기 귀속 계약을 요구하고 있어, 예기치 못한 인생의 긴급한 이벤트나 단기 프로젝트 임무 수행 등의 상황에서는 이러한 고정 약정이 자칫 크나큰 족쇄이자 중도 해지 위약금 리스크로 고스란히 귀결될 소지가 존재합니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                이러한 유동적 니즈를 섬세하게 충족시키는 것이 바로 <a href="https://carnrentzssite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">1년렌트카</a> 라는 하이브리드 세그먼트 금융 프로그램입니다. 단 12개월 동안만 온전히 타인 명의의 자산 형태로 리스크 없이 깔끔하게 운용한 후 별도의 불이익 없이 수월하게 차량을 반납하거나 타 차종으로 갈아탈 수 있는 주체적인 시스템입니다. 해외 지사 주재원의 임시 귀국 체류, 프로젝트 기반 임시 업무 지원을 위해 신속하게 배치되는 현장 공무 전용 차량, 그리고 신형 차량 출시가 임박하여 브릿지 형태로 단기간 편하게 탑승할 프리미엄 모빌리티를 물색 중인 이들에게 최고의 탁월성을 보장하는 검증된 노하우입니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentzssite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                단기 1년 스케줄러 맞춤 설계
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 차렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/977003/pexels-photo-977003.jpeg?auto=compress&cs=tinysrgb&w=600" alt="편안한 가족 여행차 임대" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">Everyday Rental</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentosite.withusrizz.com" target="_blank" rel="noopener noreferrer">차렌트의 올바른 라이프스타일 가치</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                소유의 종식을 선언하고 경험의 풍요로움을 선택하는 2026년 시대적 가치 흐름 안에서 스마트한 이동 수단을 현명하게 렌탈하는 일은 이제 특별한 사건이 아닌 일상적인 주류 트렌드로 완전히 자리매김하였습니다. 일상에서 매일 필요를 충족하기 위해 단기 혹은 상시 장기로 다양하게 활용 가능한 이 대안은 경제적인 라이프스타일을 대변합니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                모빌리티 접근성을 최상으로 끌어올려 주는 스마트 플랫폼 기반의 <a href="https://carnrentosite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">차렌트</a> 포털은 복잡하게만 보이던 전통적인 중간 대리점을 철저히 거치지 않고, 다이렉트 알고리즘을 매개로 한눈에 실시간 국내 대형 렌터카 채널들의 보유 수량과 최저가 혜택을 다이내믹하게 분석 및 정렬해 줍니다. 갓 면허를 취득한 초보 운전자부터 정교한 기업 자금 운용에 여념이 없는 전문 재무 관리자들까지, 수많은 사용자의 목적과 조건에 딱 부합하는 효율적인 렌탈 대안을 찾을 수 있는 신뢰도 높은 창구를 지금 당장 노크해 보실 것을 권장해 드립니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentosite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                전국 실시간 차종 가격 매칭
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 자동차장기렌트 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&w=600" alt="출고 대기중인 하이브리드 차량들" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Smart Choice</span>
+                            <h3 class="text-xl font-bold text-brandDark mt-3 mb-4 hover:text-indigo-600 transition-colors">
+                                <a href="https://carnrentwsite.withusrizz.com" target="_blank" rel="noopener noreferrer">자동차장기렌트 정수 파헤치기</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 text-justify mb-4 leading-relaxed">
+                                신차 구매 시 필수적으로 동반되는 7% 수준의 막대한 취등록세 납부 의무, 정기적으로 날아오는 만만치 않은 공과금 영수증, 그리고 연 단위로 갱신 주기를 맞는 값비싼 종합 자동차 보험료 청구서는 오너 드라이버들에게 해마다 적지 않은 현금 흐름의 일시적 마비를 수반케 합니다.
+                            </p>
+                            <p class="text-sm text-slate-600 text-justify leading-relaxed">
+                                이러한 구시대적 지출 방식의 복잡한 연결고리를 완전히 혁파한 대안이 바로 신뢰도 높은 <a href="https://carnrentwsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold underline hover:text-indigo-800">자동차장기렌트</a> 전용 통합 프로그램입니다. 월 일회 납부하는 명료한 고정 렌트료 하나에 취등록세, 공과 및 제반 세금, 그리고 보험료가 백퍼센트 녹아들어 가 있어 자금 흐름 예측 가시성을 최상으로 업그레이드할 수 있습니다. 수년간 차량을 타고 난 뒤에는 복잡한 감가 셈법에 신경 쓰거나 중고 상사를 여러 군데 돌며 헐값에 매각할 필요 없이, 단순히 렌터카사 주차장에 원상복구 상태로 편리하게 키를 반납만 하면 종료되기에 시작과 끝맺음 모두에서 최고의 우아함과 심플함을 견인해 줍니다.
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-slate-50 mt-6">
+                            <a href="https://carnrentwsite.withusrizz.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-800 group">
+                                장기렌트 프로세스 원격 진단
+                                <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
-  </body>
+
+
+<!-- [Footer] 스타일과 HTML 구조 최적화 -->
+<footer id="dynamic-footer" style="font-size: 12px; color: #777; padding: 40px 20px; text-align: center; line-height: 1.8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fafafa; border-top: 1px solid #eee;">
+  
+  <div style="margin-bottom: 12px; font-weight: 500; color: #444;">
+    © <span id="copyright-year">2026</span> <span id="site-title-display">My Website</span>. All rights reserved.
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #999;">
+    <!-- 실시간 상태 표시등 (시각적 신뢰도 상승) -->
+    <span style="display: inline-block; width: 8px; height: 8px; background-color: #2ecc71; border-radius: 50%; box-shadow: 0 0 5px #2ecc71; animation: pulse 2s infinite;"></span>
+    <span id="sync-status" aria-live="polite">시스템 연결 중...</span>
+    <span style="color: #ddd;">|</span>
+    <span>최종 업데이트: <time id="last-update-time" datetime="2026-01-01">2026-01-01</time></span>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // 1. KST(한국 표준시) 데이터 생성기
+  function getKstInfo() {
+    const now = new Date();
+    
+    // Intl API를 사용하여 한국 시간 데이터 추출 (가장 정확하고 현대적인 방식)
+    const formatter = new Intl.DateTimeFormat('ko-KR', {
+      timeZone: 'Asia/Seoul',
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit',
+      hour12: false
+    });
+
+    const parts = formatter.formatToParts(now).reduce((acc, part) => {
+      acc[part.type] = part.value;
+      return acc;
+    }, {});
+
+    const year = parts.year;
+    const formattedDate = year + '-' + parts.month + '-' + parts.day;
+    const isoDateTime = year + '-' + parts.month + '-' + parts.day + 'T' + parts.hour + ':' + parts.minute + ':' + parts.second + '+09:00';
+
+    return { year, formattedDate, isoDateTime };
+  }
+
+  // 2. SEO 메타 태그 및 JSON-LD 일괄 업데이트
+  function updateSeoEngine(data) {
+    const title = document.title || window.location.hostname;
+
+    // 메타 태그 헬퍼 함수
+    const setMeta = (selector, content) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement('meta');
+        if (selector.includes('property')) {
+          el.setAttribute('property', selector.split('"')[1]);
+        } else {
+          el.setAttribute('name', selector.split('"')[1]);
+        }
+        document.head.appendChild(el);
+      }
+      el.content = content;
+    };
+
+    // [SEO] 필수 메타 데이터
+    setMeta('property="og:updated_time"', data.isoDateTime);
+    setMeta('property="article:modified_time"', data.isoDateTime);
+    setMeta('name="date"', data.formattedDate);
+    setMeta('name="last-modified"', data.isoDateTime); // 서버 응답 대용
+    setMeta('name="copyright"', data.year + ' ' + title);
+
+    // [SEO] JSON-LD 구조화 데이터 (WebPage + Organization 결합)
+    let ldJsonScript = document.getElementById('seo-json-ld');
+    if (!ldJsonScript) {
+      ldJsonScript = document.createElement('script');
+      ldJsonScript.id = 'seo-json-ld';
+      ldJsonScript.type = 'application/ld+json';
+      document.head.appendChild(ldJsonScript);
+    }
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": window.location.href,
+          "url": window.location.href,
+          "name": title,
+          "datePublished": data.isoDateTime,
+          "dateModified": data.isoDateTime,
+          "inLanguage": "ko-KR"
+        },
+        {
+          "@type": "Organization",
+          "name": title,
+          "url": window.location.origin,
+          "logo": window.location.origin + "/favicon.ico"
+        }
+      ]
+    };
+    ldJsonScript.textContent = JSON.stringify(jsonLd);
+  }
+
+  // 3. UI 업데이트
+  function updateUi(data) {
+    const title = document.title || window.location.hostname;
+    
+    // 연도 및 제목
+    document.getElementById('copyright-year').textContent = data.year;
+    document.getElementById('site-title-display').textContent = title;
+    
+    // 날짜
+    const timeElem = document.getElementById('last-update-time');
+    timeElem.textContent = data.formattedDate;
+    timeElem.setAttribute('datetime', data.isoDateTime);
+
+    // 상태 메시지 (랜덤 순환)
+    const statusMsgs = [
+         "서비스 최적화 완료", 
+          "데이터베이스 동기화 완료", 
+          "보안 프로토콜 점검 완료",
+          "콘텐츠 최신화 완료",
+          "시스템 점검 완료",
+          "웹표준 레이아웃 최적화",
+          "사용자 인터페이스 안정화",
+          "성능 개선 완료",
+          "새로운 데이터 로드 완료",
+          "운영 시스템 안정화 완료",
+          "인덱싱 최적화 완료",
+          "데이터 무결성 검사 완료", 
+          "캐시 레이어 갱신",
+          "보안 프로토콜 활성화", 
+          "실시간 콘텐츠 동기화"
+    ];
+    document.getElementById('sync-status').textContent = statusMsgs[Math.floor(Math.random() * statusMsgs.length)];
+  }
+
+  // 4. 실행 제어 (DOM 로드 후 실행)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = getKstInfo();
+      updateUi(data);
+      updateSeoEngine(data);
+    });
+  } else {
+    const data = getKstInfo();
+    updateUi(data);
+    updateSeoEngine(data);
+  }
+})();
+</script>
+
+
+
+
+</body>
 </html>
